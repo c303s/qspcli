@@ -2,7 +2,7 @@
 
 Version 0.01a | built on 31.05.2026
 
-Command-line uploader for CrowdStrike QuickScan Pro.
+Command-line uploader for the CrowdStrike QuickScan Pro API.
 
 DISCLAIMER: This is not an official CrowdStrike tool.
 
