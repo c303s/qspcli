@@ -698,6 +698,10 @@ def _update_verdicts_csv(result: dict, file_path: Path, output_dir: Path) -> Pat
     normalized = _normalize_scan_result(result) if result.get("scan") or result.get("result") else result
     csv_path = output_dir / "verdicts.csv"
     file_exists = csv_path.exists()
+    verdict_reason = normalized.get("verdict_reason") or ""
+    if not verdict_reason:
+        verdict_reasons = normalized.get("verdict_reasons") or []
+        verdict_reason = "; ".join(str(item) for item in verdict_reasons if item)
 
     with csv_path.open("a", encoding="utf-8", newline="") as handle:
         writer = csv.writer(handle)
@@ -711,6 +715,7 @@ def _update_verdicts_csv(result: dict, file_path: Path, output_dir: Path) -> Pat
                     "file size",
                     "SHA256",
                     "threat verdict",
+                    "verdict reason",
                 ]
             )
         writer.writerow(
@@ -722,6 +727,7 @@ def _update_verdicts_csv(result: dict, file_path: Path, output_dir: Path) -> Pat
                 normalized.get("file_size") or 0,
                 normalized.get("sha256") or "N/A",
                 normalized.get("verdict") or "N/A",
+                verdict_reason or "N/A",
             ]
         )
 

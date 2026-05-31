@@ -17,7 +17,7 @@ DISCLAIMER: This is not an official CrowdStrike tool.
 
 - Python 3.10+
 - A CrowdStrike Falcon API client with Quick Scan Pro `read` and `write` scope
-	Falcon console → Support and resources → API clients and keys
+  (Falcon console → Support and resources → API clients and keys)
 
 ## Mac/Linux
 
