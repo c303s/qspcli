@@ -1,4 +1,4 @@
-# .gitignore
+# .gitignore file
 .env
 .env.bak
 __pycache__/
