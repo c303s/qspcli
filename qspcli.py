@@ -703,6 +703,27 @@ def _update_verdicts_csv(result: dict, file_path: Path, output_dir: Path) -> Pat
         verdict_reasons = normalized.get("verdict_reasons") or []
         verdict_reason = "; ".join(str(item) for item in verdict_reasons if item)
 
+    if file_exists:
+        existing_rows: list[list[str]] = []
+        with csv_path.open("r", encoding="utf-8", newline="") as handle:
+            existing_rows = list(csv.reader(handle))
+        if existing_rows:
+            header = existing_rows[0]
+            migrated = False
+            if len(header) >= 8 and header[7] != "verdict reason":
+                header[7] = "verdict reason"
+                migrated = True
+            elif len(header) == 7:
+                header.append("verdict reason")
+                for row in existing_rows[1:]:
+                    row.append("N/A")
+                migrated = True
+
+            if migrated:
+                with csv_path.open("w", encoding="utf-8", newline="") as handle:
+                    writer = csv.writer(handle)
+                    writer.writerows(existing_rows)
+
     with csv_path.open("a", encoding="utf-8", newline="") as handle:
         writer = csv.writer(handle)
         if not file_exists:
