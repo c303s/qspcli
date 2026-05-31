@@ -9,9 +9,9 @@ DISCLAIMER: This is not an official CrowdStrike tool.
 ## Files
 
 - `.gitignore`
-- `README.md` — General details
-- `install.sh` — Installer for Linux/Mac
-- `qspcli.py` — Main script
+- General details
+- Installer for Linux/Mac
+- Main script
 
 ## Requirements
 
