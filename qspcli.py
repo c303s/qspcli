@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""QSPCLI — CrowdStrike QuickScan Pro CLI.
+"""Main script.
+
+QSPCLI — CrowdStrike QuickScan Pro CLI.
 
 Uploads files to CrowdStrike QuickScan Pro and retrieves scan verdicts.
 Uses only Python standard library — no third-party packages required.
@@ -411,7 +413,6 @@ def _print_banner() -> None:
     print("  Uploads files to CrowdStrike QuickScan Pro and retrieves scan verdicts.")
     print()
     print("  DISCLAIMER: This is not an official CrowdStrike tool.")
-    print("  Use at your own risk. CrowdStrike is not responsible for this tool.")
     print()
     print(SEPARATOR)
     print()
@@ -510,7 +511,7 @@ def _with_spinner(message: str, func, *args, **kwargs):
 
 def _prompt_falcon_values() -> dict[str, str]:
     print("  Enter your CrowdStrike Falcon API credentials.")
-    print("  Hint: Falcon console → Support & resources → API clients and keys")
+    print("  Hint: Falcon console → Support and resources → API clients and keys")
     print("  Required scopes: Quick Scan Pro — read AND write")
     print()
     return {

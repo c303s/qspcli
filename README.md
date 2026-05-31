@@ -1,13 +1,23 @@
 # QSPCLI
 
+Version 0.01a | built on 31.05.2026
+
 Command-line uploader for CrowdStrike QuickScan Pro.
 
-Not an official CrowdStrike tool.
+DISCLAIMER: This is not an official CrowdStrike tool.
+
+## Files
+
+- `.gitignore`
+- `README.md` — General details
+- `install.sh` — Installer for Linux/Mac
+- `qspcli.py` — Main script
 
 ## Requirements
 
-- Python 3.8+
+- Python 3.10+
 - A CrowdStrike Falcon API client with Quick Scan Pro `read` and `write` scope
+	Falcon console → Support and resources → API clients and keys
 
 ## Mac/Linux
 
@@ -43,17 +53,10 @@ python qspcli.py
 
 QSPCLI will:
 
-- validate saved credentials from `.env`, if present
+- validate saved credentials
 - optionally let you update credentials
 - let you choose and persist a working directory
 - list files in that directory for scan selection
-
-Saved values in `.env`:
-
-- `FALCON_CLIENT_ID`
-- `FALCON_CLIENT_SECRET`
-- `FALCON_BASE_URL`
-- `QSPCLI_WORK_DIR`
 
 ## Output
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# QSPCLI installer
+# Installer for Linux/Mac
 # Downloads the project from GitHub, creates a local launcher, and starts the tool.
 #
 # Usage:
