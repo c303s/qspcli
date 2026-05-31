@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Installer for Linux/Mac
-# Downloads the project from GitHub, creates a local launcher, and starts the tool.
+# Downloads the project from GitHub, creates a launcher, and starts the tool.
 #
 # Usage:
 #   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/c303s/qspcli/main/install.sh)"
