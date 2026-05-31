@@ -1,0 +1,3 @@
+timestamp,filename,file extension,file type,file size,SHA256,threat verdict
+2026-05-31 15:54:37,7z.exe,.exe,64-bit exe 7zip sfx,1658851,d64a0468f5b5b0b0fc5b2188450bcd655b70809d97b1c4535f2884635094377d,clean
+2026-05-31 15:56:05,Torsten.pdf,.pdf,pdf,121966,24469bf2be6e33c92dc136bb7089d8ad70a8feb0a52cc7b2d5216aefe4fae96e,likely_benign

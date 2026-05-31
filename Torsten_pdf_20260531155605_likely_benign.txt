@@ -1,0 +1,12 @@
+QSPCLI Scan Report
+Generated: 2026-05-31T15:56:05
+File: Torsten.pdf
+File Path: /Users/christian/Downloads/vscode/qspcli/Torsten.pdf
+SHA256: 24469bf2be6e33c92dc136bb7089d8ad70a8feb0a52cc7b2d5216aefe4fae96e
+Status: done
+Verdict: likely_benign
+File Type: pdf
+File Size: 119.1 KB
+
+Verdict Reasons:
+- Machine learning models identified file or subfile as 'likely benign'
