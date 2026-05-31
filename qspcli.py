@@ -4,7 +4,7 @@
 QSPCLI — CrowdStrike QuickScan Pro CLI.
 
 Uploads files to CrowdStrike QuickScan Pro and retrieves scan verdicts.
-Uses only Python standard library — no third-party packages required.
+Uses the Python standard library only — no third-party packages required.
 """
 
 from __future__ import annotations
